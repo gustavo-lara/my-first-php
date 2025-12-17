@@ -9,7 +9,7 @@ class Pessoa
     { // Método, ação que a classe pode fazer
         echo "Falou <br>";
         echo $this->nome . " de " . $this->idade . " anos acabou de falar."; //Concatenação chamando os atributos da classe
-        echo "<br>"; 
+        echo "<br>";
     }
 }
 
@@ -18,7 +18,29 @@ $gustavo = new Pessoa(); //Instanciando a classe e criando um objeto -> criar um
 $gustavo->nome = "Gustavo Lara";
 $gustavo->idade = 19;
 
-echo $gustavo->nome;
-echo "<br>";
 $gustavo->Falar(); //Chamando o método Falar da classe Pessoa
 
+class Carro
+{
+    public $modelo;
+    public $marca;
+    public $ano;
+    public $cor;
+    public $valor;
+
+    public function Comprar($nome)
+    {
+        echo $nome . " comprou o carro " . $this->modelo . " da marca " . $this->marca . " no valor de " . $this->valor . " reais.";
+        echo "<br>";
+    }
+}
+
+$carroDeGustavo = new Carro();
+
+$carroDeGustavo->modelo = "c63";
+$carroDeGustavo->marca = "Mercedes-Benz";
+$carroDeGustavo->ano = "2013";
+$carroDeGustavo->cor = "branco";
+$carroDeGustavo->valor = 3500000;
+
+$carroDeGustavo->comprar($gustavo->nome);
